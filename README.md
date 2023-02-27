@@ -3,7 +3,7 @@
 
 ## Todo
 
-- [ ] Set up Dockerfile / docker-compose.yml (test by printing "hello world!")
+- [X] Set up Dockerfile / docker-compose.yml (test by printing "hello world!")
 - [ ] Set up FastAPI app (test by accessing from Docker)
 - [ ] Set up todo SQLAlchemy models
 - [ ] Add TOML configuration mechanism for specifying config and secrets
