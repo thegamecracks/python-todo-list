@@ -14,7 +14,12 @@ engine = create_async_engine(
         host="db",  # service name defined in docker-compose.yml
         port=5432,
         dbname=os.environ["POSTGRES_DB"],
-    )
+    ),
+    connect_args={
+        "server_settings": {
+            "application_name": __package__,
+        }
+    }
 )
 sessionmaker = async_sessionmaker(engine, expire_on_commit=False)
 
