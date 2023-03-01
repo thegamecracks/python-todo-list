@@ -1,6 +1,12 @@
 # python-todo-list
  A web-based todo list built on FastAPI and SQLAlchemy.
 
+## Running tests
+
+```sh
+docker build --target tests .
+```
+
 ## Todo
 
 - [X] Set up Dockerfile / docker-compose.yml (test by printing "hello world!")

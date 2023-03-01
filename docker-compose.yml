@@ -2,6 +2,8 @@ version: "3.8"
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      target: prod
     ports:
       - "5000:8000"
