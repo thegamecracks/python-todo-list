@@ -1,11 +1,26 @@
 # python-todo-list
  A web-based todo list built on FastAPI and SQLAlchemy.
 
-## Running tests
+## Usage
 
-```sh
-docker build --target tests .
-```
+This requires Docker Compose to run.
+
+1. Create a `.env` file using the [example.env](example.env) as a template.
+   Adjust passwords as necessary.
+
+2. Start the services with `docker-compose up --build --exit-code-from app`.
+
+3. Go to http://localhost:5000 to access the website.
+
+## Development
+
+To run tests, use `docker build --target tests .`.
+
+If you need to administrate the database during runtime, a pgAdmin instance
+is provided at the address http://localhost:5433. You can log into pgAdmin
+using the appropriate email/password credentials defined in [`.env`](example.env)
+and then add the database. Note that the hostname specified in the Connections tab
+should be called "db".
 
 ## Todo
 
