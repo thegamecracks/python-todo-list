@@ -12,5 +12,7 @@ COPY src/ /src
 # Install the source code
 RUN pip install .
 
-# Run the module
-CMD ["python", "-m", "todo_list"]
+EXPOSE 8000
+
+# Run the webserver
+CMD ["uvicorn", "--host", "0.0.0.0", "--port", "8000", "todo_list.app:app"]

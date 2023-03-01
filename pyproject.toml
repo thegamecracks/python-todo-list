@@ -25,6 +25,7 @@ dependencies = [
     "fastapi==0.92.0",
     "pydantic>=1.10.5,<2",
     "sqlalchemy>=2.0.4,<3",
+    "uvicorn==0.20.0",
 ]
 dynamic = ["version"]
 
