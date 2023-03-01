@@ -29,8 +29,21 @@ dependencies = [
 ]
 dynamic = ["version"]
 
+[project.optional-dependencies]
+dev = [
+    "black>=23.1.0",
+    "mypy>=1.0.1",
+    "pytest>=7.2.1",
+]
+
 [project.urls]
 homepage = "https://github.com/thegamecracks/python-todo-list"
 
+[tool.mypy]
+packages = ["src", "tests"]
+
 [tool.setuptools.dynamic]
 version = { attr = "todo_list.__version__" }
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
