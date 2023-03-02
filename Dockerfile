@@ -3,10 +3,12 @@ FROM python:3.11.2-slim AS main-deps
 WORKDIR /app
 
 COPY install_dependencies.py pyproject.toml ./
-RUN python install_dependencies.py
+RUN --mount=type=cache,target=/root/.cache \
+    python install_dependencies.py
 
 FROM main-deps AS dev-deps
-RUN python install_dependencies.py --no-required --extras dev
+RUN --mount=type=cache,target=/root/.cache \
+    python install_dependencies.py --no-required --extras dev
 
 FROM dev-deps AS tests
 COPY src/ ./src

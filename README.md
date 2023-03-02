@@ -3,14 +3,18 @@
 
 ## Usage
 
-This requires Docker Compose to run.
+This requires Docker Compose to be installed, along with Docker's [BuildKit]
+being enabled.
 
-1. Create a `.env` file using the [example.env](example.env) as a template.
+1. Create a `.env` file using the [example.env] as a template.
    Adjust passwords as necessary.
 
 2. Start the services with `docker-compose up --build --exit-code-from app`.
 
 3. Go to http://localhost:5000 to access the website.
+
+[BuildKit]: https://docs.docker.com/build/buildkit/
+[example.env]: example.env
 
 ## Development
 
