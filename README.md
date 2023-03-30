@@ -13,6 +13,8 @@ being enabled.
 
 3. Go to http://localhost:5000 to access the website.
 
+4. To cleanup the containers/volumes, use `docker-compose down --volumes`.
+
 [BuildKit]: https://docs.docker.com/build/buildkit/
 [example.env]: example.env
 
