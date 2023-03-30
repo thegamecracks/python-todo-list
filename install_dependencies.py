@@ -7,7 +7,7 @@ import argparse
 import subprocess
 import sys
 import tomllib
-from typing import Iterable, TypedDict, cast
+from typing import Collection, TypedDict, cast
 
 
 # NOTE: type-hinting purposes
@@ -35,7 +35,10 @@ def get_required_dependencies(pyproject: PyProject) -> list[str]:
     return pyproject["project"]["dependencies"]
 
 
-def get_optional_dependencies(pyproject: PyProject, extras: Iterable[str]) -> list[str]:
+def get_optional_dependencies(
+    pyproject: PyProject,
+    extras: Collection[str],
+) -> list[str]:
     extras = set(extras)
 
     selected_dependencies = []
