@@ -92,11 +92,7 @@ def main():
     if args.dry_run:
         return print(dependencies)
 
-    subprocess.check_call(
-        [sys.executable, "-m", "pip", "install"]
-        + get_required_dependencies(pyproject)
-        + get_optional_dependencies(pyproject, args.extras)
-    )
+    subprocess.check_call([sys.executable, "-m", "pip", "install"] + dependencies)
 
 
 if __name__ == "__main__":
