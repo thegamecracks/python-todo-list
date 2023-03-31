@@ -9,11 +9,11 @@ being enabled.
 1. Create a `.env` file using the [example.env] as a template.
    Adjust passwords as necessary.
 
-2. Start the services with `docker-compose up --build --exit-code-from app`.
+2. Start the services with `docker compose up --build --exit-code-from app`.
 
 3. Go to http://localhost:5000 to access the website.
 
-4. To cleanup the containers/volumes, use `docker-compose down --volumes`.
+4. To cleanup the containers/volumes, use `docker compose down --volumes`.
 
 [BuildKit]: https://docs.docker.com/build/buildkit/
 [example.env]: example.env
